@@ -2,27 +2,19 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 46px;
   flex: 1;
 }
 
 .logo {
   position: relative;
   width: 90%;
-  max-width: 300px;
-  margin-bottom: 3rem;
+  max-width: 272px;
+  margin-bottom: 2.375rem;
   z-index: 1;
 }
 .logo img {
   width: 100%;
-}
-.logo img.shadow {
-  left: 0;
-  top: 5px;
-  position: absolute;
-  filter: blur(0.5rem);
-  opacity: 0.25;
-  z-index: -1;
 }
 
 .app.dark .logo img {
@@ -30,9 +22,6 @@ main {
 }
 .app.dark .logo img.shadow {
   filter: blur(0.5rem) brightness(50%);
-}
-.app.dark .search:hover {
-  box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.15);
 }
 .app.dark .search button {
   color: white;
@@ -49,7 +38,7 @@ main {
 
 .searchContainer {
   width: calc(100% - 3rem);
-  max-width: 600px;
+  max-width: 746px;
   position: relative;
 }
 
@@ -57,76 +46,69 @@ main {
   display: flex;
   align-items: center;
   border-radius: 99px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 100%;
   background: var(--white);
   position: relative;
   z-index: 6;
-}
-.search input {
-  font-size: 1.15rem;
-  border: 0;
-  background: none;
-  font-family: "Titillium Web", sans-serif;
-  color: var(--bk1);
-  flex: 1;
-  padding: 0.75rem 1.5rem 0.75rem 3.5rem;
-  border-radius: 99px 0 0 99px;
-}
-.search input::placeholder {
-  color: var(--gr1);
-}
-.search button {
-  font-size: 1.15rem;
-  font-family: "Titillium Web", sans-serif;
-  border: 0;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right bottom, var(--b1), var(--b2));
-  color: var(--white);
-  font-weight: 500;
-  border-radius: 0 99px 99px 0;
-  user-select: none;
+  min-height: 48px;
+  max-height: 48px;
+  padding-right: 32px;
+  padding-left: 20px;
   cursor: pointer;
 }
-.search button svg {
-  display: none;
+.search input {
+  border: 0;
+  cursor: pointer;
+  background: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  flex: 1;
+  padding: 0 0 0 14px;
+  border-radius: 99px 0 0 99px;
 }
-.search button:hover {
-  box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.25);
+.search input::-moz-placeholder {
+  color: black;
 }
-.search button:focus {
-  box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5), 0 0.25rem 0.75rem rgba(62, 202, 255, 0.5);
-}
-.search:hover {
-  box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.08);
-}
-.search > svg {
-  width: 1.5rem;
-  position: absolute;
-  color: var(--gr1);
+.search input::placeholder {
+  color: black;
 }
 
-.lucky {
+.input_icon {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.shortcut {
+  cursor: pointer;
   display: flex;
-  padding: 0.75rem 1.5rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1.2rem;
   background: transparent;
   border: none;
-  color: var(--bk3);
-  opacity: 0.85;
   font-weight: 500;
-  border-radius: 99px;
-  user-select: none;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin: 1.5rem auto;
-  font-size: 0.95rem;
+  font-size: 13px;
 }
-.lucky:hover {
+.shortcut .plus_icon {
+  background: #d9e1fb;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.shortcut:hover {
   background: var(--gr2);
-  opacity: 1;
-}
-.lucky svg {
-  width: 1.25rem;
-  margin-right: 0.5rem;
-  color: var(--y2);
 }
 
 .search.focus {
@@ -149,45 +131,35 @@ button:focus {
   ul.nav {
     display: none;
   }
-
   .user {
     display: none;
   }
-
   .logo {
     width: 60%;
     margin-bottom: 1.5rem;
   }
-
   .search > svg {
     display: none;
   }
-
   .search input {
     padding: 0.75rem 0.75rem 0.75rem 1.25rem;
     width: 100%;
     font-size: 1rem;
   }
-
   .search button {
     display: flex;
     align-items: center;
     padding: 0.9rem 1rem;
   }
-
   .search button span {
     display: none;
   }
-
   .search button svg {
     width: 1rem;
     display: block;
   }
-
-  .lucky {
+  .shortcut {
     margin-top: 1.5rem;
     font-size: 0.9rem;
   }
-}
-
-/*# sourceMappingURL=Main.css.map */
+}/*# sourceMappingURL=Main.css.map */

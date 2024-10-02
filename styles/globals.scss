@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-
 :root {
   --b1: #3fc5fa;
   --b2: #4f86db;
@@ -15,7 +13,7 @@
   --bk3: #606060;
   --gr1: #cdcdcd;
   --gr2: #efefef;
-  --gr3: #fafafa;
+  --gr3: #fff;
   --white: #fff;
   --maxWidth: 720px;
 }
@@ -48,6 +46,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.2s;
+  font-family: arial, sans-serif;
 }
 
 svg {

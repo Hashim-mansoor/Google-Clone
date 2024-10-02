@@ -45,7 +45,7 @@
   pointer-events: none;
 }
 .apps__list a {
-  width: calc(100% / 3);
+  width: 33.3333333333%;
   align-items: center;
   display: flex;
   padding: 1rem;
@@ -92,23 +92,17 @@
     transform: translateY(-1rem);
     padding: 0.75rem;
   }
-
   .apps__list a {
     padding: 0.75rem;
   }
-
   .apps__list a img {
     width: 2.75rem;
   }
-
   .apps__list a span {
     font-size: 0.85rem;
     margin-top: 0.25rem;
   }
-
   .apps.open .apps__list {
     transform: translateY(0);
   }
-}
-
-/*# sourceMappingURL=Apps.css.map */
+}/*# sourceMappingURL=Apps.css.map */

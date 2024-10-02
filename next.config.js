@@ -4,7 +4,5 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   },
-  future: {
-    webpack5: true
-  }
+  reactStrictMode: true // Enforces React best practices, optional but recommended
 };

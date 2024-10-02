@@ -1,10 +1,11 @@
-import { MenuAlt1Icon, MoonIcon, SearchIcon, SparklesIcon, SunIcon, UserCircleIcon } from '@heroicons/react/outline';
+import { FaUser } from 'react-icons/fa6';
+import { ImLab } from 'react-icons/im';
+import { HiOutlinePlus } from 'react-icons/hi2';
+import { MdOutlineSearch } from 'react-icons/md';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useRef } from 'react';
 import Apps from '../components/Apps';
-import Sidebar from '../components/Sidebar';
-
 export default function Home() {
   const router = useRouter();
   const toggleSwitch = useRef(null);
@@ -45,56 +46,81 @@ export default function Home() {
       </Head>
 
       <header>
-        <Sidebar ref={sidebarRef} />
-        <span>
-          <button className="sidebarToggle icon" onClick={openSidebar}>
+        {/* <Sidebar ref={sidebarRef} /> */}
+        {/* <span> */}
+        {/* <button className="sidebarToggle icon" onClick={openSidebar}>
             <MenuAlt1Icon />
-          </button>
-          <ul className="nav">
+          </button> */}
+        {/* <ul className="nav">
             <li>Images</li>
             <li>Videos</li>
             <li>News</li>
             <li>Explore</li>
-          </ul>
-        </span>
-        <span>
-          <div className="themeToggle icon" ref={toggleSwitch} onClick={toggleTheme}>
+          </ul> */}
+        {/* </span> */}
+        <div className="header">
+          {/* <div className="themeToggle icon" ref={toggleSwitch} onClick={toggleTheme}>
             <SunIcon className="sun" />
             <MoonIcon className="moon" />
-          </div>
+          </div> */}
+          <ul className="nav">
+            <li>
+              <a href="https://mail.google.com/mail">Gmail</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/imghp?hl=en&tab=ri&authuser=0&ogbl">Images</a>
+            </li>
+          </ul>
+          <a href="https://labs.google.com/search" className="lab_icon icon">
+            <ImLab size={20} />
+          </a>
           <Apps />
-          <div className="user">
-            <UserCircleIcon />
-            <span className="uid">
-              <span className="top">My Account</span>
-            </span>
-          </div>
-        </span>
+          <a href="#" className="user_icon icon">
+            <FaUser size={20} />
+          </a>
+        </div>
       </header>
 
       <main>
         <div className="logo">
-          <img src="/google.png" alt="google logo" />
-          <img className="shadow" src="/google.png" alt="google logo" />
+          <img src="/google.svg" alt="google logo" />
         </div>
         <div className="searchContainer">
           <form onSubmit={search} className="search" ref={searchBox}>
-            <SearchIcon className="searchIcon" />
+            <MdOutlineSearch className="searchIcon" size={22} />
             <input
               type="text"
-              placeholder="Type your query..."
+              placeholder="Search Google or type a URL"
               ref={searchInput}
               onFocus={() => searchBox.current.classList.add('focus')}
               onBlur={() => searchBox.current.classList.remove('focus')}
             />
-            <button type="submit">
-              <span>Search</span>
-              <SearchIcon className="searchIcon" />
-            </button>
+            <div className="input_icon">
+              <span className="mic_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    fill="#4285F4"
+                    d="M12 15c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v7c0 1.66 1.34 3 3 3z"
+                  />
+                  <path fill="#34A853" d="M11 18.92h2V22h-2z" />
+                  <path
+                    fill="#F4B400"
+                    d="M7 12H5c0 1.93.78 3.68 2.05 4.95l1.41-1.41C7.56 14.63 7 13.38 7 12z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 17c-1.38 0-2.63-.56-3.54-1.47l-1.41 1.41A6.99 6.99 0 0 0 12.01 19c3.87 0 6.98-3.14 6.98-7h-2c0 2.76-2.23 5-4.99 5z"
+                  />
+                </svg>
+              </span>
+            </div>
           </form>
-          <button className="lucky">
-            <SparklesIcon />
-            Feeling Lucky?
+          <button className="shortcut">
+            <span className="plus_icon">
+              <HiOutlinePlus size={22} />
+            </span>
+            Add shortcut
           </button>
         </div>
       </main>

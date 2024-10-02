@@ -1,4 +1,4 @@
-import { ViewGridIcon } from '@heroicons/react/outline';
+import { TbGridDots } from 'react-icons/tb';
 import React, { useEffect, useRef } from 'react';
 
 const Apps = () => {
@@ -25,7 +25,7 @@ const Apps = () => {
   return (
     <div className="apps" ref={appsList}>
       <button className="icon appsToggle" ref={appsToggle} onClick={toggleApps}>
-        <ViewGridIcon />
+        <TbGridDots size={22} />
       </button>
       <div className="apps__list">
         <a target="_blank" href="https://assistant.google.com">
